@@ -60,7 +60,7 @@ npm install
 4. Execute o projeto:
 
 ```powershell
-npm run serve
+npm run dev
 ```
 ### Resultado
 
