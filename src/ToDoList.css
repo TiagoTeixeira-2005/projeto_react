@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background: rgb(75, 63, 97);
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+h1{
+    font-weight: 900;
+    color: rgb(177, 160, 199);
+    text-align: center;
+}
+
+form{
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 60px;
+    margin: 30px auto;
+    margin-bottom: 60px;
+}
+
+input{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: rgb(95, 74, 115);
+    padding-left: 30px;
+    font-size: 16px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+
+input::placeholder {
+    color: #B1A0C7;  /* Cor personalizada do placeholder */
+    font-style: italic; /* Estilo opcional para o texto */
+  }
+
+button.add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background: rgb(122, 107, 153);
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 62px;
+    border-top-right-radius: 15px;
+}
+
+button.add:hover{
+    background-color: rgba(255, 255, 255, 0.616);
+    color: rgb(122, 107, 153);
+    transition: 0.5s;
+}
+
+button.del{
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 15px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+button.del:hover{
+    background: rgb(122, 107, 153);
+    color: white;
+    transition: 0.5s;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.delAll{
+    border: 2px solid rgb(122, 107, 153);
+    background: none;
+    padding: 15px;
+    color: rgb(177, 160, 199);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button.delAll:hover{
+    background: rgb(122, 107, 153);
+    color: white;
+    transition: 0.5s;
+}
+
+.ListaTarefas{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 600px;
+    margin: auto;
+}
+
+.Item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(95, 74, 115);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.Item:hover{
+    background-color: rgb(66, 48, 82);
+    border: 1px solid rgb(66, 48, 82);
+}
+
+.Item span{
+    width: 100%;
+    color: white;
+    margin-right: 10px;
+    padding: 10px 10px;
+    text-align: start;
+}
+
+.Item.Completo{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(95, 74, 115);
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.Item.Completo:hover{
+    background-color: rgb(66, 48, 82);
+    border: 1px solid rgb(66, 48, 82);
+}
+
+.Item.Completo span{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.493);
+    margin-right: 10px;
+    padding: 10px 10px;
+    text-decoration: line-through;
+    text-align: start;
+}
+
+.iconeCentral{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 620px) {
+    form{
+        width: 100%;
+    }
+    .ListaTarefas{
+        width: 100%;
+    }
+}
